@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Card } from "@heroui/react";
 import { Award, Briefcase, Headphones } from "lucide-react";
 import Image from "next/image";
 
@@ -71,14 +70,13 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
+                  className="bg-space-card/50 backdrop-blur-md border border-white/5 hover:border-neon-cyan/50 transition-colors rounded-2xl"
                 >
-                  <Card className="bg-space-card/50 backdrop-blur-md border border-white/5 hover:border-neon-cyan/50 transition-colors">
-                    <div className="flex flex-col items-center justify-center p-6 text-center">
-                      {stat.icon}
-                      <h3 className="font-bold text-lg">{stat.value}</h3>
-                      <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">{stat.label}</p>
-                    </div>
-                  </Card>
+                  <div className="flex flex-col items-center justify-center p-6 text-center">
+                    {stat.icon}
+                    <h3 className="font-bold text-lg">{stat.value}</h3>
+                    <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">{stat.label}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>

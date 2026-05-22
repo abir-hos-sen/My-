@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Card, CardFooter, Button, Chip } from "@heroui/react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
@@ -77,7 +76,7 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        {/* Filter Chips */}
+        {/* Filter Buttons */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,25 +84,27 @@ export default function Projects() {
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((cat) => (
-            <Chip
+            <button
               key={cat}
-              variant={filter === cat ? "solid" : "bordered"}
-              color="primary"
-              className={`cursor-pointer transition-all ${filter === cat ? "bg-neon-violet text-white shadow-[0_0_15px_rgba(124,58,237,0.5)]" : "border-white/20 text-white/70 hover:border-neon-cyan/50"}`}
               onClick={() => setFilter(cat)}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-300 cursor-pointer ${
+                filter === cat 
+                  ? "bg-neon-violet text-white border-neon-violet shadow-[0_0_15px_rgba(124,58,237,0.5)]" 
+                  : "bg-transparent text-white/60 border-white/20 hover:border-neon-cyan/50 hover:text-white"
+              }`}
             >
               {cat}
-            </Chip>
+            </button>
           ))}
         </motion.div>
 
         {/* Projects Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <AnimatePresence>
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 layout
@@ -137,13 +138,19 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      <Button as="a" href={project.github} isIconOnly variant="flat" className="bg-white/10 hover:bg-neon-violet text-white backdrop-blur-md font-bold text-xs">
-                        GH
-                      </Button>
-                      <Button as="a" href={project.live} isIconOnly variant="flat" className="bg-white/10 hover:bg-neon-cyan text-white backdrop-blur-md">
-                        <ExternalLink size={18} />
-                      </Button>
+                    <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                      <a 
+                        href={project.github} 
+                        className="px-4 py-2 rounded-lg bg-white/10 hover:bg-neon-violet text-white backdrop-blur-md text-xs font-bold transition-colors"
+                      >
+                        GitHub
+                      </a>
+                      <a 
+                        href={project.live} 
+                        className="px-4 py-2 rounded-lg bg-white/10 hover:bg-neon-cyan text-white backdrop-blur-md flex items-center gap-1 text-xs font-bold transition-colors"
+                      >
+                        <ExternalLink size={14} /> Live
+                      </a>
                     </div>
                   </div>
                 </div>
