@@ -76,7 +76,7 @@ export default function Skills() {
           transition={{ delay: 0.2 }}
           className="flex flex-col w-full"
         >
-          {/* Custom Tabs */}
+
           <div className="flex flex-wrap gap-2 md:gap-6 w-full relative rounded-2xl p-2 border border-white/10 bg-space-card/50 mb-8 justify-center">
             {skillCategories.map((category) => (
               <button
@@ -98,7 +98,7 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* Tab Content */}
+
           <div className="glass-card p-6 md:p-10 min-h-[400px]">
             <AnimatePresence mode="wait">
               <motion.div
@@ -115,7 +115,7 @@ export default function Skills() {
                       <span className="font-medium text-white/90">{skill.name}</span>
                       <span className="text-neon-cyan text-sm font-mono">{skill.value}%</span>
                     </div>
-                    {/* Custom Progress Bar */}
+
                     <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}

@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen">
-      {/* Custom Cursor Spotlight */}
+
       <motion.div
         className="fixed top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0"
         style={{

@@ -10,13 +10,13 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background glowing orbs */}
+
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-violet/20 rounded-full blur-[120px] animate-pulse pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-cyan/20 rounded-full blur-[120px] animate-pulse delay-1000 pointer-events-none" />
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col-reverse lg:flex-row items-center gap-16">
         
-        {/* Left Text Content */}
+
         <div className="w-full lg:w-1/2 flex flex-col items-start gap-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-wrap gap-4 mt-4"
           >
-            {/* Explore My Work - Solid Gradient */}
+
             <a
               href="#projects"
               className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-neon-violet to-neon-cyan shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
@@ -88,12 +88,12 @@ export default function Hero() {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
             </a>
 
-            {/* Download CV - Ghost with gradient border */}
+
             <a
               href="#"
               className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm overflow-hidden"
             >
-              {/* Gradient border using pseudo wrapper */}
+
               <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-neon-violet to-neon-cyan p-[1.5px]">
                 <span className="absolute inset-0 rounded-2xl bg-space-dark group-hover:bg-white/5 transition-all duration-300"></span>
               </span>
@@ -103,7 +103,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Image Content */}
+
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -111,13 +111,13 @@ export default function Hero() {
             transition={{ duration: 1, type: "spring" }}
             className="relative w-72 h-72 md:w-[450px] md:h-[450px]"
           >
-            {/* Outer spinning ring */}
+
             <div className="absolute inset-0 rounded-full border-2 border-dashed border-neon-violet/30 animate-spin-slow"></div>
             <div className="absolute inset-4 rounded-full border border-neon-cyan/20 animate-[spin_15s_linear_infinite_reverse]"></div>
             
-            {/* Image container */}
+
             <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-space-card bg-space-mid shadow-[0_0_50px_rgba(124,58,237,0.3)]">
-              {/* Fallback avatar if image isn't available right away */}
+
               <div className="w-full h-full bg-gradient-to-br from-space-card to-neon-violet/20 flex items-center justify-center">
                 <Image 
                   src="/images/8ce5c828-004b-4f78-b172-ecdba3eaa9e9.jpg" 
@@ -129,7 +129,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Badges */}
+
             <motion.div 
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

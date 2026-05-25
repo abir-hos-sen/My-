@@ -31,7 +31,7 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-          {/* Contact Info */}
+
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,7 +78,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

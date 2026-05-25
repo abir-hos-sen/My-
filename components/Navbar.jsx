@@ -32,7 +32,7 @@ export default function AppNavbar() {
     >
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
 
-        {/* Brand */}
+
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-neon flex items-center justify-center text-xl font-bold shadow-[0_0_15px_rgba(124,58,237,0.5)]">
             A
@@ -42,7 +42,7 @@ export default function AppNavbar() {
           </p>
         </div>
 
-        {/* Links */}
+
         <ul className="hidden md:flex gap-8 items-center">
           {menuItems.map((item, index) => (
             <li key={`${item.name}-${index}`}>
@@ -56,10 +56,11 @@ export default function AppNavbar() {
           ))}
         </ul>
 
-        {/* CTA Button */}
+
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://github.com/abir-hos-sen"
+            target="_blank" rel="noopener noreferrer"
             className="hidden lg:block text-white/50 hover:text-neon-cyan transition-colors text-sm font-semibold tracking-widest uppercase"
           >
             GitHub
@@ -69,11 +70,11 @@ export default function AppNavbar() {
             href="#contact"
             className="relative px-5 py-2.5 rounded-xl font-semibold text-sm tracking-wide overflow-hidden group"
           >
-            {/* Gradient border */}
+
             <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-neon-cyan to-neon-violet p-[1.5px]">
               <span className="absolute inset-0 rounded-xl bg-space-dark group-hover:bg-transparent transition-all duration-300"></span>
             </span>
-            {/* Text */}
+
             <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-violet group-hover:text-white transition-all duration-300">
               Hire Me
             </span>

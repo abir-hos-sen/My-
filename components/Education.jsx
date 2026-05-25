@@ -7,22 +7,22 @@ import { GraduationCap, Calendar } from "lucide-react";
 export default function Education() {
   const educationData = [
     {
-      degree: "B.Sc in Computer Science",
-      institution: "University of Technology",
-      year: "2018 - 2022",
-      description: "Graduated with honors. Specialized in Software Engineering and Web Technologies. Led the university coding club.",
+      degree: "Bachelor of Social Science",
+      institution: "Belkuchi Govt College",
+      year: "2023 - 2024",
+      description: "Studying Economics and Islamic Studies with focus on analytical and social understanding.",
     },
     {
-      degree: "Diploma in Web Development",
-      institution: "Tech Institute",
-      year: "2016 - 2018",
-      description: "Learned the fundamentals of web design, HTML, CSS, JavaScript, and responsive layouts.",
+      degree: "Higher Secondary Certificate",
+      institution: "Belkuchi Govt College",
+      year: "2023",
+      description: "Studied humanities subjects including Economics and Islamic Studies.",
     },
     {
-      degree: "High School",
-      institution: "Science Academy",
-      year: "2014 - 2016",
-      description: "Focus on Mathematics and Physics. Participated in national science fairs.",
+      degree: "Secondary School Certificate",
+      institution: "Dhukuriabera High School",
+      year: "2021",
+      description: "Built a strong foundation in science, mathematics, and logical thinking.",
     }
   ];
 
@@ -59,7 +59,7 @@ export default function Education() {
               transition={{ delay: index * 0.2 }}
               className="mb-12 relative pl-8 md:pl-0"
             >
-              {/* Timeline Dot */}
+
               <div className="absolute w-4 h-4 rounded-full bg-neon-cyan border-4 border-space-dark -left-[9px] md:-left-[9px] top-1 shadow-[0_0_10px_rgba(6,182,212,0.8)] z-10"></div>
               
               <div className="glass-card p-6 md:ml-8 hover:border-neon-pink/50 transition-colors group">

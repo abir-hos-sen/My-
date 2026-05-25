@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export default function About() {
   const stats = [
-    { label: "Experience", value: "3+ Years", icon: <Award className="text-neon-cyan mb-2" size={28} /> },
-    { label: "Completed", value: "150+ Projects", icon: <Briefcase className="text-neon-violet mb-2" size={28} /> },
+    { label: "Experience", value: "Fresh Talent", icon: <Award className="text-neon-cyan mb-2" size={28} /> },
+    { label: "Completed", value: "20+ Projects", icon: <Briefcase className="text-neon-violet mb-2" size={28} /> },
     { label: "Support", value: "Online 24/7", icon: <Headphones className="text-neon-pink mb-2" size={28} /> },
   ];
 
@@ -36,7 +36,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Left Avatar */}
+
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -60,7 +60,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right Content */}
+
           <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               {stats.map((stat, index) => (
@@ -88,7 +88,7 @@ export default function About() {
               transition={{ delay: 0.3 }}
               className="text-white/70 leading-relaxed text-lg mb-8"
             >
-              I am a passionate UI/UX Designer and Full Stack Developer. Proficient in React.js, Next.js, Redux, Node.js, and Docker, I build scalable, high-performance applications. Skilled in modern UI design with Tailwind CSS and Framer Motion, I deliver innovative real-time systems and impactful digital solutions that leave a lasting impression.
+              I am a passionate Frontend and Backend Developer. Having recently completed my comprehensive learning journey, I am fully equipped to build scalable and high-performance web applications. Skilled in modern UI design and robust backend architectures, I am ready to deliver innovative digital solutions that leave a lasting impression.
             </motion.p>
           </div>
         </div>

@@ -13,39 +13,39 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "StudyNook",
       category: "Full Stack",
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
-      tech: ["Next.js", "Tailwind", "Stripe", "Prisma"],
-      github: "#",
-      live: "#"
+      tech: ["Next.js", "Tailwind", "MongoDB", "Express"],
+      github: "https://github.com/abir-hos-sen",
+      live: "https://studynook-client-chi.vercel.app/"
     },
     {
       id: 2,
-      title: "Crypto Dashboard",
+      title: "SunCart",
       category: "Frontend",
       image: "https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=1000&auto=format&fit=crop",
-      tech: ["React", "Framer Motion", "Chart.js"],
-      github: "#",
-      live: "#"
+      tech: ["React", "Tailwind CSS", "Firebase"],
+      github: "https://github.com/abir-hos-sen",
+      live: "https://assignment-08-sigma.vercel.app/"
     },
     {
       id: 3,
-      title: "SaaS Landing Page",
-      category: "UI/UX",
+      title: "KeenKeepr",
+      category: "Full Stack",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
-      tech: ["Figma", "Tailwind CSS"],
-      github: "#",
-      live: "#"
+      tech: ["React", "Node.js", "MongoDB"],
+      github: "https://github.com/abir-hos-sen",
+      live: "https://assignment07-mxci.vercel.app/"
     },
     {
       id: 4,
-      title: "Task Management App",
-      category: "Full Stack",
+      title: "DigiTools",
+      category: "Frontend",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1000&auto=format&fit=crop",
-      tech: ["Node.js", "Express", "MongoDB", "React"],
-      github: "#",
-      live: "#"
+      tech: ["React", "Tailwind", "Firebase"],
+      github: "https://github.com/abir-hos-sen",
+      live: "https://assignment-06-pink.vercel.app/"
     }
   ];
 
@@ -76,7 +76,7 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        {/* Filter Buttons */}
+
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ export default function Projects() {
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
+
         <motion.div 
           layout
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -122,10 +122,10 @@ export default function Projects() {
                     src={project.image}
                   />
                   
-                  {/* Overlay */}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-space-dark via-space-dark/60 to-transparent opacity-80 z-10"></div>
                   
-                  {/* Content */}
+
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span className="text-neon-cyan text-xs font-mono mb-2 block">{project.category}</span>
                     <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
